@@ -170,3 +170,17 @@ input[type="checkbox"] {
 .task-text {
     margin-bottom: 15px;
 }
+
+.btn {
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px;
+    background: #32a268;
+    color: white;
+}
+
+.save {
+    background-color: #ff7259;
+}git
