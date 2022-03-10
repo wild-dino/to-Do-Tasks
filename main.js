@@ -41,4 +41,4 @@ function addTask() {
 
 
 
-const btn = document.querySelector('img').onclick = addTask;
+const btn = document.querySelector('.add').onclick = addTask;
