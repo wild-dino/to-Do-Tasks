@@ -1,7 +1,9 @@
-let input = document.querySelector('.i-1');
-let tasks = document.querySelector('.tasks');
-let taskDone = document.querySelector('.progress__done');
-let taskInProgress = document.querySelector('.progress__in-progress');
+const input = document.querySelector('.i-1');
+const tasks = document.querySelector('.tasks');
+const taskDone = document.querySelector('.progress__done');
+const taskInProgress = document.querySelector('.progress__in-progress');
+const addBtn = document.querySelector('.add');
+const saveBtn = document.querySelector('.save');
 let count = 0; // total tasks
 let countDone = 0;
 
@@ -32,13 +34,21 @@ function addTask() {
             event.stopPropagation();
         });
     }
+
+    function loadTasks() {
+        const data = localStorage.getItem('tasks');
+        if (data) {
+            tasks.innerHTML = data;
+        }
+    }
+
+    loadTasks();
 }
 
+addBtn.addEventListener('click', addTask);
+
+saveBtn.addEventListener('click', () => {
+    localStorage.setItem('tasks', tasks.innerHTML);
+});
 
 
-
-
-
-
-
-const btn = document.querySelector('.add').onclick = addTask;
