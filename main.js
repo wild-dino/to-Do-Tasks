@@ -14,6 +14,7 @@ function addTask() {
         const text = document.createElement('label');
         const delBtn = document.createElement('div');
 
+        div.classList.add('task-text');
         delBtn.classList.add('close');
         text.append(value);
         tasks.appendChild(div).append(text, delBtn);
