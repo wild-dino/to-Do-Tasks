@@ -43,6 +43,8 @@ function onLoaded() {
 
         for (const button of deleteBtns) {
             removeTask(button);
+            count++;
+            taskInProgress.innerHTML = `In progress: ${count}`;
         }
     }
 
@@ -56,6 +58,8 @@ function onLoaded() {
     clearBtn.addEventListener("click", () => {
         tasks.innerHTML = "";
         localStorage.removeItem("tasks", tasks.innerHTML);
+        count = 0;
+        taskInProgress.innerHTML = `In progress: ${count}`;
     });
 
     addBtn.addEventListener("click", createElements);
