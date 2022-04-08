@@ -1,20 +1,19 @@
 html {
-  font-size: 100%;
+    font-size: 100%;
 }
 
 *,
 *:after,
 *:before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h5 {
-  margin: 0;
+    margin: 0;
 }
 
 body {
@@ -27,152 +26,152 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 1270px;
-  margin: 0 auto;
-  padding: 15px;
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 15px;
 }
 
 .logo {
-  margin-top: 33px;
-  font-size: 36px;
-  font-weight: 700;
+    margin-top: 33px;
+    font-size: 36px;
+    font-weight: 700;
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .progress {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
 }
 
 .progress__done {
-  flex: 1 1 300px;
-  background-color: #e0ffc2;
-  font-size: 28px;
-  font-weight: medium;
-  padding: 15px 65px;
-  border-radius: 20px;
-  margin-top: 15px;
-  margin-right: 65px;
-  box-shadow: 11px 12px 20px rgba(0, 0, 0, 0.25);
+    flex: 1 1 300px;
+    background-color: #e0ffc2;
+    font-size: 28px;
+    font-weight: medium;
+    padding: 15px 65px;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-right: 65px;
+    box-shadow: 11px 12px 20px rgba(0, 0, 0, 0.25);
 }
 
 .progress__in-progress {
-  flex: 1 1 300px;
-  font-size: 28px;
-  font-weight: medium;
-  margin-top: 15px;
-  background-color: #ffeca7;
-  padding: 15px 65px;
-  border-radius: 20px;
-  box-shadow: 11px 12px 20px rgba(0, 0, 0, 0.25);
+    flex: 1 1 300px;
+    font-size: 28px;
+    font-weight: medium;
+    margin-top: 15px;
+    background-color: #ffeca7;
+    padding: 15px 65px;
+    border-radius: 20px;
+    box-shadow: 11px 12px 20px rgba(0, 0, 0, 0.25);
 }
 
 .list {
-  width: 100%;
-  min-height: 500px;
-  background-color: #ffffff;
-  border-radius: 50px;
-  box-shadow: 11px 12px 20px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    min-height: 500px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 11px 12px 20px rgba(0, 0, 0, 0.25);
 }
 
 .list__container {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .list__items {
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-wrap: wrap;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 label {
-  font-weight: 600;
-  margin-top: 19px;
-  align-self: flex-start;
-  margin-bottom: 15px;
+    font-weight: 600;
+    margin-top: 19px;
+    align-self: flex-start;
+    margin-bottom: 15px;
 }
 
 .i-1 {
-  width: 50%;
-  border-radius: 20px;
-  border: 0;
-  background-color: #feffbf;
-  padding: 5px 15px;
-  margin-right: 10px;
+    width: 50%;
+    border-radius: 20px;
+    border: 0;
+    background-color: #feffbf;
+    padding: 5px 15px;
+    margin-right: 10px;
 }
 
 .tasks {
-  position: relative;
-  width: 100%;
-  margin: 30px;
+    position: relative;
+    width: 100%;
+    margin: 30px;
 }
 
 .crossed {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .close {
-  cursor: pointer;
-  position: absolute;
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  opacity: 0.3;
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
 }
 
 .close:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .close:before,
 .close:after {
-  position: absolute;
-  left: 15px;
-  content: "";
-  height: 20px;
-  width: 2px;
-  background-color: rgb(8, 7, 7);
+    position: absolute;
+    left: 15px;
+    content: "";
+    height: 20px;
+    width: 2px;
+    background-color: rgb(8, 7, 7);
 }
 
 .close:before {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .close:after {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .task-text {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .btn {
-  margin-right: 10px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  padding: 0 15px;
-  background: #32a268;
-  color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px;
+    background: #32a268;
+    color: white;
 }
 
 .save {
-  background-color: #4e9753;
+    background-color: #4e9753;
 }
 
 .clear {
