@@ -9,56 +9,62 @@ function onLoaded() {
     let count = 0; // total tasks
     let countDone = 0;
 
-    function addTask() {
+    function createElements() {
         const value = input.value;
-        createElements();
+        const div = document.createElement("div");
+        const text = document.createElement("label");
+        const delBtn = document.createElement("div");
 
-        function createElements() {
-            const div = document.createElement("div");
-            const text = document.createElement("label");
-            const delBtn = document.createElement("div");
+        div.classList.add("task-text");
+        delBtn.classList.add("close");
+        text.append(value);
+        tasks.appendChild(div).append(text, delBtn);
+        taskInProgress.innerHTML = `In progress: ${++count}`;
+        input.value = "";
 
-            div.classList.add("task-text");
-            delBtn.classList.add("close");
-            text.append(value);
-            tasks.appendChild(div).append(text, delBtn);
-            taskInProgress.innerHTML = `In progress: ${++count}`;
-            input.value = "";
+        removeTask(delBtn);
+    }
 
-            removeTask(delBtn);
+    function removeTask(element) {
+        element.addEventListener("click", (event) => {
+            element.parentElement.remove();
+            taskDone.innerHTML = `Done: ${++countDone}`;
+            taskInProgress.innerHTML = `In progress: ${--count}`;
+            event.stopPropagation();
+        });
+    }
+
+    function loadTasks() {
+        const data = localStorage.getItem("tasks");
+        if (data) {
+            tasks.innerHTML = data;
         }
+        const deleteBtns = document.querySelectorAll(".close");
 
-        function removeTask(element) {
-            element.addEventListener("click", (event) => {
-                element.parentElement.remove();
-                taskDone.innerHTML = `Done: ${++countDone}`;
-                taskInProgress.innerHTML = `In progress: ${--count}`;
-                event.stopPropagation();
-            });
+        for (const button of deleteBtns) {
+            removeTask(button);
         }
-
-        function loadTasks() {
-            const data = localStorage.getItem("tasks");
-            if (data) {
-                tasks.innerHTML = data;
-            }
-        }
-
-        loadTasks();
     }
 
     input.addEventListener("keypress", (keyPressed) => {
         const keyEnter = 13;
         if (keyPressed.which == keyEnter) {
-            addTask();
+            createElements();
         }
     });
 
-    addBtn.addEventListener("click", addTask);
+    clearBtn.addEventListener("click", () => {
+        tasks.innerHTML = "";
+        localStorage.removeItem("tasks", tasks.innerHTML);
+    });
+
+    addBtn.addEventListener("click", createElements);
 
     saveBtn.addEventListener("click", () => {
         localStorage.setItem("tasks", tasks.innerHTML);
     });
+
+    loadTasks();
 }
 
 document.addEventListener("DOMContentLoaded", onLoaded);
